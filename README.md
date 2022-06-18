@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+# React cloud-based online Image Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is based on REACT HOOKS, MATERIAL UI, CONTEXT API, FIREBASE AUTHENTICATION, API (cloud functions) INTEGRATION USING AXIOS, FIREBASE STORAGE and FILEROBOT-IMAGE-EDITOR (CDN version).
 
-## Available Scripts
+The backend codes uses NODE JS and EXPRESS JS for API scripting which is deployed as GOOGLE CLOUD FUNCTIONS. It is completely agnostic to the frontend code; making the web application a super scalable and extendable one.
 
-In the project directory, you can run:
+## How to run this project
 
-### `npm start`
+Firstly, create a firebase project from firebase console: initialize Authentication, storage, firestore and cloud functions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Next, clone this repository, then replace the config object in firebase.js with your custom configuration for web from firebase.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Then, follow the instructions at "....cloud function repo" to deploy the APIs (cloud functions) for this project. After deployment, the URL to the deployed APIs will be provided. Copy it and use it as your baseURL in the axiosConfig.js file in this repo.
 
-### `npm test`
+Finally, run the following command in your project's root directory's terminal.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm install` To install all dependencies
+### `npm run build` To build your project for production
+### `firebase init` Then select hosting, use build/index.js as your entry file, remember to select `configure as a single page application`.
+### `firebase deploy` To host your single page application
 
-### `npm run build`
+Upon a successful deployment, the default url to this web app will be provided.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If everything went well. You should have a live cloud-based image editor.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Happy hacking!
