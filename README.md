@@ -10,13 +10,13 @@ Firstly, create a firebase project from firebase console: initialize Authenticat
 
 Next, clone this repository, then replace the config object in firebase.js with your custom configuration for web from firebase.
 
-Then, follow the instructions at "....cloud function repo" to deploy the APIs (cloud functions) for this project. After deployment, the URL to the deployed APIs will be provided. Copy it and use it as your baseURL in the axiosConfig.js file in this repo.
+Then, follow the instructions at "https://github.com/mike-obas/inbranded-design-functions" to deploy the APIs (cloud functions) for this project. After deployment, the URL to the deployed APIs will be provided. Copy it and use it as your baseURL in the axiosConfig.js file in this repo.
 
 Finally, run the following command in your project's root directory's terminal.
 
 ### `npm install` To install all dependencies
 ### `npm run build` To build your project for production
-### `firebase init` Then select hosting, use build/index.js as your entry file, remember to select `configure as a single page application`.
+### `firebase init` Then select hosting, use build/index.js as your entry file, remember to select "configure as a single page application".
 ### `firebase deploy` To host your single page application
 
 Upon a successful deployment, the default url to this web app will be provided.
